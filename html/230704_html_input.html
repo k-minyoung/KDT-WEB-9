@@ -30,7 +30,7 @@
 
     <h2>checkbox type</h2>
     <input type="checkbox" name="hobby" value="야구" /> 야구
-    <input type="checkbox" name="hobby" value="축구" /> 축구
+    <input type="checkbox" name="hobby" value="축구" checked /> 축구
 
     <h2>radio type</h2>
     <input type="radio" name="gender" value="남자" /> 남자
@@ -38,9 +38,55 @@
     
     <h2>radio2 type</h2>
     <input type="radio" name="favorite" value="야구" /> 야구
-    <input type="radio" name="favorite" value="축구" /> 축구
+    <input type="radio" name="favorite" value="축구" id="축구" /><label for="축구">축구</label>
     <input type="radio" name="favorite" value="줄넘기" id="줄넘기"/><label for="줄넘기">줄넘기</label>
     
+    <h2>date type</h2>
+    <input type="date" name="birth" />
+    <input type="datetime-local" name="birth-time" />
+    
+    <h2>select tag</h2>
+    <select name="select-name">
+        <optgroup label="옵션1~2">
+
+            <option value="option1">옵션1</option>
+            <option value="option2">옵션2</option>
+
+        </optgroup>
+        <optgroup label="옵션3~4">
+            <option value="option3" selected>옵션3</option>
+            <option value="option4" disabled>옵션4</option>
+        </optgroup>
+    </select>
+
+    <div>
+        <input type="text" name="email" value="123@naver.com" readonly />
+    </div>
+
+
+    <h1>설문조사</h1>
+        이름<input type="text" name="name">
+    <br />
+        이메일<input type="text" name="email" placeholder="123@abc.com" />
+    <br />
+    <h2>나이</h2>
+        <input type="radio" name="age" value="10대" />10대
+        <input type="radio" name="age" value="20대" />20대
+        <input type="radio" name="age" value="30대" />30대
+        <input type="radio" name="age" value="40대" />40대
+        <input type="radio" name="age" value="50대" />50대
+        <input type="radio" name="age" value="60대 이상" />60대 이상
+    <br />
+    <h2>원하는 강의(복수응답가능합니다.)</h2>
+        <input type="checkbox" name="class" value="html" />html
+        <input type="checkbox" name="class" value="javascript" />javascript
+        <input type="checkbox" name="class" value="css" />css
+    <br />
+    <br />
+    <textarea name="text" cols="100" rows="10" placeholder="하고싶은 말을 써주세요 :)">
+    </textarea>
+    <button type="button">제출</button>
+
 
 </body>
 </html>

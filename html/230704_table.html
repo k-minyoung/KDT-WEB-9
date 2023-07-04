@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+</head>
+<body>
+    <!-- table > thead , tbody > tr > th, td -->
+    <table border="1"
+    cellspacing="0"
+    cellpadding="10" 
+    align="center" 
+    width="100%"
+    bordercolor="red"
+    bgcolor="yellow"
+    
+    ><thead>
+        <tr>
+            <th>제목 1</th>
+            <th>제목 2</th>
+            <th>제목 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2">내용 1</td>
+            <!-- <td>내용 2</td> -->
+            <td rowspan="3">내용 3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">내용 1</td>
+            <td>내용 2</td>
+            <!-- <td>내용 3</td> -->
+        </tr>
+        <tr>
+            <!-- <td>내용 1</td> -->
+            <td>내용 2</td>
+            <!-- <td>내용 3</td> -->
+        </tr>
+    </tbody>
+    </table>
+<br />
+
+    <table border="1" cellspacing="0" cellpadding="10" width="20%">
+        <tr>
+            <td colspan="2" width="100">1</td>
+            <!-- <td>2</td> -->
+            <td rowspan="2" width="20">2</td>
+           
+        </tr>
+
+        <tr>
+            <td rowspan="2" width="20">3</td>
+            <td width="100">center</td>
+            <!-- <td>3</td> -->
+            
+        </tr>
+        
+        <tr>
+            <!-- <td>1</td> -->
+            <td colspan="2">4</td>
+            <!-- <td>3</td> -->
+            
+        </tr>
+            
+        
+    </table>
+
+    <br />
+
+    <table border="1" cellspacing="0" cellpadding="10" >
+        <tr>
+            <th>구분</th>
+            <th>음료</th>
+            <th>가격</th>
+            <th>이미지</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">커피류</td>
+            <td align="center"> <a href="https://terms.naver.com/entry.naver?docId=962394&cid=48170&categoryId=48227">아메리카노 </a></td>
+            <td>4200원</td>
+            <td><img src="./image/ame.png"/></td>
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td align="center"> <a href="https://terms.naver.com/entry.naver?docId=6129630&cid=59320&categoryId=59320">돌체라떼 </a></td>
+            <td>4800원</td>
+            <td><img src="./image/cafe.png"/></td>
+        </tr>
+        <tr>
+            <td rowspan="2">주스류</td>
+            <td align="center"> <a href="https://terms.naver.com/entry.naver?docId=6129717&cid=59320&categoryId=59320">자바칩 프라푸치노 </a></td>
+            <td rowspan="2">5000원</td>
+            <td><img src="./image/jaba.png"/></td>
+
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td align="center"><a href="https://terms.naver.com/entry.naver?docId=6129717&cid=59320&categoryId=59320">녹차 프라푸치노</a></td>
+            <!-- <td></td> -->
+            <td><img src="./image/green.png"/></td>
+        </tr>
+
+    </table>
+
+    
+    
+</body>
+</html>
