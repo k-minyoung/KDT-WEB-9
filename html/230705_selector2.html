@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 속성값을 변수화 */
+        /* 변수 : 특정 값을 저장하는 공간 */
+
+        :root {
+            --main-color : orange;
+            --main-font-size : 30px;
+                }
+
+        div {
+            color: var(--main-color);
+            font-size : var(--main-font-size);
+        }
+        div {
+            background-color: violet;
+        }
+
+
         /* a:hover {
             color: red;
         }
@@ -89,7 +106,7 @@
         [value] {
             color: black;
         } */
-
+/* 
         [disabled] {
             background-color: red;
         }
@@ -98,7 +115,7 @@
         }
         input:not([placeholder]) {
             background-color: blue;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -141,10 +158,10 @@
     <!-- <input type="text" value="HEROPY">
     <input type="password" value="1234">
     <input type="text" value="ABCD" disabled> -->
-    <input type="text" placeholder="이름"/>
+    <!-- <input type="text" placeholder="이름"/>
     <input type="password" value="pw"/>
     <input type="text" value="000-0000-0000"/>
     <input type="text" placeholder="핸드폰"/>
-    <input type="text" placeholder="주민번호" disabled/>
+    <input type="text" placeholder="주민번호" disabled/> -->
 </body>
 </html>
