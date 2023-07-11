@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+        let age = Number(prompt("나이를 입력하세요"));
+            let gender = prompt("성별을 입력하세요");
+            if(age >= 20) {
+                if(gender == "여자") {
+                    console.log("성인 여자")
+                } else {
+                    console.log("성인 남자")
+                }
+            } else if(age >= 17){
+                if(gender == "여자") {
+                    console.log("고등 여학생")
+                } else {
+                    console.log("고등 남학생")
+                }
+            } else if(age >= 14){
+                if(gender == "여자") {
+                    console.log("중등 여학생")
+                } else {
+                    console.log("중등 남학생")
+                }
+            } else if(age >= 8){
+                if(gender == "여자") {
+                    console.log("초등 여학생")
+                } else {
+                    console.log("초등 남학생")
+                }
+            } else if(age >= 0){
+                if(gender == "여자") {
+                    console.log("유아 여학생")
+                } else {
+                    console.log("유아 남학생")
+                }
+            } else {
+                alert("오류 발생!")
+            }
+    </script>20
+    
+</body>
+</html>
