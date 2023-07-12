@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id=red class="box red">
+        <span>레드</span>
+        <span>박스</span>
+    </div>
+    
+    <div id=orange class="box orange"></div>
+    
+    <div class="box yellow"></div>
+    
+    <input type="text" name="id"/>
+
+    <button type="button" onclick="orangeToggle()">버튼</button>
+    <script>
+
+        function orangeToggle() {
+            let orangeBox = document.getElementById("orange")
+            orangeBox.classList.toggle("orange")
+        }
+            //classList  속성은 toggle 함수 제공
+            //괄호 안에 들어온 값을 리스트 안에 존재하는지 알아서 판단
+            //괄호 안에 들어온 값을 있다면 삭제, 없다면 추가함
+
+            //classList 속성은 contains 함수 제공
+            //괄호 안에 들어온 값이 클래스에 존재하는 지 검사 (true false)
+                
+            //classList 속성은 remove 함수 제공
+            //괄호 안에 들어온 값을 리스트 안에서 삭제.
+            
+            //classList 속성은 remove 함수 제공
+            //괄호 안에 들어온 값을 리스트 안에 추가
+            
+                
+        // let redBoxById = document.getElementById("red")
+        // console.log(redBoxById)
+        // let boxes = document.getElementsByClassName("box") //배열로 담기며, 한개만 있어도 무조건 배열
+        // console.log(boxes)
+        // let boxesByTag = document.getElementsByTagName("div") //배열로 담기며, div태그에 담긴 내용을 모두 불러움
+        // console.log(boxesByTag)
+        
+        // let input = document.getElementsByName("id")//배열로 담기며, name이 id인것 모두 불러옴
+        // console.log(input)
+
+        // let boxesBySeletor = document.querySelector(".box")//선택자를 입력, 하나만 선택, .box의 경우 3개가 있고 그중 가장 위에 것 하나를 가져옴
+        // console.log(boxesBySeletor)
+
+        // let boxesBySelectorAll = document.querySelectorAll(".box")//위랑 똑같으나 모두 배열에 담김
+        // console.log(boxesBySelectorAll)
+        
+        // let orangeBySelectorAll = document.querySelectorAll("#orange")//id는 하나지만 All 때문에 배열로 담김. 원래 그럼.
+        // console.log(orangeBySelectorAll)
+
+
+        document.write("안녕?") // body태그의 가장 마지막에 요소를 추가
+        
+        // redBox.innerHTML = "<span>aaa</span>"
+        // console.log(redBox.innerText) // 요소 안에 있는 글자만 찍힘 (레드박스)
+        // console.log(redBox.innerHTML) // 태그 그대로 다 가져옴
+        // console.log(redBox.textContent)//글자만
+
+        // console.log(redBox.className)//box red
+        // redBox.className = "yellow" // 클래스네임을 바꿈
+
+    </script>
+    
+</body>
+</html>
