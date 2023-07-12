@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let str = `Happy day~! `;
+        
+        // console.log(str.length);
+
+        // console.log(str.toUpperCase());
+
+        // console.log(str.indexOf(`p`));
+
+        // console.log(str.slice(2, 7));
+
+        // console.log(str.replace(`p`,`a`));
+        // console.log(str.replaceAll(`p`,`a`));
+
+        // console.log(str.repeat(2));
+        
+        // console.log(str.trim());
+
+        // console.log(str.split("a"));
+
+        let hello = "Hello~";
+
+        hello.split("")
+        //["H","e","l","l","o","~"]
+        hello.split("").reverse()
+        //["~","o","l","l","e","H"]
+        let hellorevers =  hello.split("").reverse().join("")
+        //~olleH
+        console.log(hellorevers)
+
+       let a = hello.split("").reverse().join("/")
+        //~/o/l/l/e/H
+
+        let aa = hello.split("").reverse().join("/").split("/")
+        console.log(aa)
+        
+    
+    </script>
+</body>
+</html>
