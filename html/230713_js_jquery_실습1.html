@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <style>
+    
+    </style>
+  
+</head>
+<body>
+    <img src="" class="image"/>
+    <br />
+    <button type="button"  onclick="fruit('사과')">사과</button>
+    <button type="button"  onclick="fruit('바나나')">바나나</button>
+    <button type="button"  onclick="fruit('포도')">포도</button>
+    <button type="button"  onclick="fruit('복숭아')">복숭아</button>
+
+    
+   
+    <script>
+
+        function fruit (fru) {
+            $(".image").attr("src",`../image/${fru}.jpg`)
+        }
+
+
+
+        function apple() {
+            
+           $(".image").attr("src","../image/사과.jpg")
+
+        }
+        function banana() {
+           $(".image").attr("src","../image/바나나.jpg")
+
+        }
+        function grape() {
+           $(".image").attr("src","../image/포도.jpg")
+
+        }
+        function peach() {
+           $(".image").attr("src","../image/복숭아.jpg")
+
+        }       
+    </script>
+</body>
+</html>

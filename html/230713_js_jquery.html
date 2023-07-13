@@ -25,13 +25,42 @@
 <body>
     <input type="text" name="id" id="id" />
     <button onclick="submitt()">바껴라</button>
+    <button onclick="btn2()">사라져라</button>
 
     <div></div>
     <div></div>
-    <script>
+ 
+    <div class="container">
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="red"></div>
+
+    
+    
+    </div>
+    <button onclick="fn3()">요소 탐색</button>
+
+ <script>
+    function fn3() {
+      //  console.log($(".container").children().removeClass("red"))
+        console.log($(".red").nextAll())
+
+    }
 
 
-        $("input").val("aaa")
+
+
+
+
+
+
+
+
+
+
+
+
+        // $("input").val("aaa")
         
         
         
@@ -83,8 +112,26 @@
 
             //addClass 함수
             $("div").addClass("red") //모든 요소(div)를 잘 선택해서 모두 적용
+
+
         }
 
+        function btn2() {
+            //removeClass 함수
+            //$("div").removeClass()
+            $("div").removeClass("red")
+
+            //hasClass 함수
+            $("div").hasClass("red")
+
+            //toggleClass 함수
+            $("div").toggleClass("red")
+
+
+
+
+
+        }
         
         
     </script>
