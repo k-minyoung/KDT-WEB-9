@@ -11,6 +11,7 @@
         .box {
             width: 100px;
             height: 100px;
+            cursor: pointer;
         }
 
         .red {
@@ -35,35 +36,53 @@
   
 </head>
 <body>
-    <div class="box red" onclick="switchColor()"></div>
+    <div id ="box" class="box red" onclick="switchColor2()"></div>
+    
     
     <script>
-        function switchColor() {
-            if($(".box").hasClass("red")) {           
-            $(".box").switchClass("red","orange",100)
-        } 
+        // function switchColor() {
+        //     if($(".box").hasClass("red")) {           
+        //     $(".box").switchClass("red","orange",100)
+        // } 
 
-            else if ($(".box").hasClass("orange")){
-                       $(".box").switchClass("orange","yellow",100)
-                    }
+            // else if ($(".box").hasClass("orange")){
+            //            $(".box").switchClass("orange","yellow",100)
+            //         }
 
-            else if ($(".box").hasClass("yellow")){
-                        $(".box").switchClass("yellow","green",100)
-                    }
+            // else if ($(".box").hasClass("yellow")){
+            //             $(".box").switchClass("yellow","green",100)
+            //         }
 
-            else if ($(".box").hasClass("green")){
-                        $(".box").switchClass("green","blue",100)
-                    }
+            // else if ($(".box").hasClass("green")){
+            //             $(".box").switchClass("green","blue",100)
+            //         }
 
-            else if ($(".box").hasClass("blue")){
-                        $(".box").switchClass("blue","purple",100)
-                    }
+            // else if ($(".box").hasClass("blue")){
+            //             $(".box").switchClass("blue","purple",100)
+            //         }
 
-            else if ($(".box").hasClass("purple")){
-                        $(".box").switchClass("purple","red",100)
-                    }   
+            // else if ($(".box").hasClass("purple")){
+            //             $(".box").switchClass("purple","red",100)
+            //         }   
 
+        // }
+        
+        const colors = ["red", "orange", "yellow", "green", "blue", "purple", "red"]
+        let num = 0;
+        function switchColor2(){
+            // 인덱스가 5를 넘기지 않도록 나머지 연산자 사용함.
+            let num2 = num%6;
+            $(".box").switchClass(colors[num2], colors[num2+1])
+            // $(".box").switchClass(colors[num2], colors[(num2+1)%6])
+            num++;
+            
+            // if (num === colors.length - 1) num = 0;
         }
+            
+        
+        
+
+        
 
     
     
