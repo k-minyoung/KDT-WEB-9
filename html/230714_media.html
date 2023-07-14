@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+
+        body {
+            background-color: aquamarine;
+        }
+        /* @media 유형 and (크기 조건) {css문법} */
+        /* 유형 : screen, all, print */
+        /* 크기 조건 : max-width , min-width / max-height ,min-height */
+        /* max-width : 오른쪽에 나온 숫자 값 이하일 때 */
+        /* min-width : 오른쪽에 나온 숫자 값 이상일 때 */
+        .box{
+            font-size: 100px;
+        }
+        @media screen and (max-width: 700px){
+            body{
+                background-color: green;
+            }
+            
+        /* screen이 700px 이하일 때, 바디의 백그라운드 그린 */
+        /* 없는 정의도 추가할 수 있고 바뀌는 값만 적어주면 됨, 안바뀌는건 안적어도됨 */
+
+    }
+        @media screen and (max-width: 500px){
+            body{
+                background-color: yellow;
+                
+            }
+
+        }
+        @media screen and (max-width: 300px){
+            body{
+                background-color: black;
+            }
+        /* 여러 값을 줄때는 큰거부터 아래로. 맨 아래있는게 가장 우선순위가 되기 때문(max가 아니라 min일경우 작은거부터 아래로) */
+
+
+
+
+
+
+
+
+        }
+        @media print {
+            .box{
+                display: none;
+            }
+        }
+
+
+    </style> -->
+
+    <style>
+        /* body {
+            background-color: black;
+        }
+
+        @media screen and (min-width: 300px){
+            body{
+                background-color: pink;
+            }
+            
+        }
+
+        @media screen and (min-width: 500px){
+            body{
+                background-color: red;
+            }
+            
+        } */
+
+        @media screen and (orientation: landscape) {
+            body{
+                background-color: blue;
+            }
+        }
+
+        
+        @media screen and (orientation: portrait) {
+            body{
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">hi</div>
+</body>
+</html>

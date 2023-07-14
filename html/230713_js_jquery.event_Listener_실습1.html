@@ -18,6 +18,9 @@
         width: 80px;
         height: 80px;
         text-align: center;
+        word-break: break-all;
+        vertical-align: top;
+        overflow: auto;
         
         
      }
@@ -26,6 +29,7 @@
         width: 80px;
         height: 80px;
      }
+     
     </style>
 </head>
 
@@ -111,8 +115,8 @@
         //1번 태그 클릭 이벤트코드
         $("td").on("click",function(){
             //console.log(this);
-            td = this;
-            let date = ($(this).text() );
+            td = this; // 전역함수를 재할당 하면 이 함수 안이 아닌 전역에 미침
+            let date = ($(this).text() ); // 텍스트를 가지고오는 함수 text()
             $("#date").val(date)
         });
         
@@ -120,7 +124,8 @@
             // input value
             let write = $("#write").val();
             //td에 append하는 코드 작성
-            $(td).append(`<br /><td>` + write + `</td>`)
+            $(td).append(`<br /><span>${write}</span>`)
+
             
             
 
