@@ -9,15 +9,19 @@
     <div>
         작성자 : 
         <input type="text" name="name" id="writer" />
+        <!-- 작성자 인풋 박스 -->
     </div>
     <div>
         내용 : 
         <input type="text" name="comment" id="comment" />
+        <!-- 내용 인풋 박스 -->
     </div>
 
     <button type="button" onclick="addRow2()">작성</button>
+    <!-- 작성 버튼 -->
     
     <table border="1" cellspacing="0">
+        <!-- 테이블 스타일 -->
         <tr>
             <th>번호</th>
             <th>작성자</th>
@@ -25,13 +29,14 @@
             <th>작성일</th>
         </tr>
     </table>
+    
 
 
     <script>
         let num = 1;
-        
+        // num=1이라고 하자. 왜?
         function addRow() {
-            let table = document.querySelector("table");
+            let table = document.querySelectorAll("table");
             // tr 태그 생성
             let tr = document.createElement("tr");
             
@@ -70,7 +75,7 @@
             //     <td>2023-7-12 20:51</td>
             // </tr>
             
-            table.appendChild(tr)
+            // table.appendChild(tr)
             num++;
             document.getElementById("writer").value = ''
             document.getElementById("comment").value = ''

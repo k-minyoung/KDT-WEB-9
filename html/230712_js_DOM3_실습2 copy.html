@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    작성자 : <input type="text" name="name" id="name"/>
+    <br />
+    내용 : <input type="text" name="comment" id="comment" />
+    <br />
+    <button type="button" onclick="button()">작성</button>
+
+    <table id="table">
+        <tr>
+            <th>번호</th>
+            <th>작성자</th>
+            <th>내용</th>
+            <th>날짜</th>
+        </tr>
+    </table>
+
+<script>
+    let num = 1; //num은 1부터 시작하자
+        function button () {
+            
+            
+    let table = document.getElementById("table"); //table을 지칭
+    let addtr = document.createElement("tr"); //tr을 생성하는 코드
+    table.appendChild(addtr)//생성한 tr태그를 table의 마지막 자식으로 넣겠다
+    
+
+
+    let writer = document.getElementById("name").value; // writer 정의 (name의 값을 가져오도록)
+    let comment = document.getElementById("comment").value; // comment 정의 (comment의 값을 가져오도록)
+    let date = new Date() // 날짜 정의
+    let date2 = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}:${date.getHours()}/${date.getMinutes()}/${date.getSeconds()}`
+
+    addtr.innerHTML =` 
+        <td>${num}</td>
+        <td>${writer}</td>
+        <td>${comment}</td>
+        <td>${date2}</td>
+     `
+     // 생성된 table의 마지막 자식 tr 안에 넣을 코드
+    num++ //num은 1씩 상승시켜야. 번호이기 때문.
+    
+    
+     document.getElementById("name").value = `` //input박스의 값 공백으로 초기화
+     document.getElementById("comment").value = ``
+
+    }
+
+
+//이해 완
+
+</script>
+
+
+</body>
+</html>
