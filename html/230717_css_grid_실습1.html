@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           
+            display: grid;
+             width: auto;
+             height: 100vh;
+         grid-template-columns: repeat(6 , 1fr);
+         grid-template-rows: repeat(4 , 1fr);
+         
+         
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .red{
+            
+            background-color: #F94144;
+            grid-column: auto / span 6;
+            
+            
+           
+        }
+        .orange {
+           
+            background-color: #F3722c;
+            grid-row: auto / span 2;
+          
+        }
+        .yellow {
+            
+            background-color: #F9C74F;
+            grid-column: auto / span 4;
+         
+        }
+        .green {
+            
+            background-color: #43AA8B;
+            grid-row : auto / span 2 
+
+        }
+        .blue {
+           
+            background-color: #F8961E;
+            grid-column: auto/ span 2;
+        }
+        .navy {
+            background-color: #90BE6D;
+            grid-column: auto/ span 2;
+        }
+        .purple {
+            color: white;
+            background-color: #4444FF;
+            grid-column: auto / span 6;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red">#F94144</div>
+        <div class="item orange">#F3722c</div>
+        <div class="item yellow">#F9C74</div>
+        <div class="item green">#43AA8B</div>
+        <div class="item blue">#F8961E</div>
+        <div class="item navy">#90BE6D</div>
+        <div class="item purple">#4444FF</div>
+    </div>
+</body>
+</html>
