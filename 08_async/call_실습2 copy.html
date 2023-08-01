@@ -42,7 +42,7 @@
             setTimeout(function(){
             console.log(name)
             resolve(name)   
-        },1000)
+        },1000);
         });
     }
     function back(){
@@ -61,7 +61,7 @@
             },1000);
         })
     }
-    promise
+     //promise
     call('kim').then(function(res){
         console.log("res " + res + '반가워')
         return back();
@@ -72,7 +72,7 @@
     })
     .then(function(res){
         console.log(`여기는 ${res}`)
-    })
+    });
 
     //async awiat 실습2
     async function exec(){
