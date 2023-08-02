@@ -29,6 +29,8 @@ app.post('/postForm',(req,res) => {
         userInfo: req.body
     });
 })
+
+//서버오픈
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 });

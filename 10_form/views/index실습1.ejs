@@ -55,14 +55,23 @@
         <fieldset>
             <legend>생년월일</legend>
             <select name="year">
-                <option value="2010">2010</option> </select>
+                <% for ( let i = 1950; i <=2000; i++){ %>
+                    <option value="<%= i %>"><%= i %></option>
+                <% } %>
+                 </select>
                 <span>년</span>
             <select name="month">
-                <option value="1">1</option>
+                <% for ( let i = 1; i <=12; i++){ %>
+                    <option value="<%= i %>"><%= i %></option>
+                <% } %>
+                
             </select>
             <span>월</span>
             <select name="day">
-                <option value="1">1</option>
+                <% for ( let i = 1; i <=31; i++){ %>
+                    <option value="<%= i %>"><%= i %></option>
+                <% } %>
+                
             </select>
             <span>일</span>
                 
