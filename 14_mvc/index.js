@@ -11,53 +11,20 @@ app.set('views','./views')
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-//임시 데이터
-const comments = [
-    {
-        id:1,
-        userId:'helloworld',
-        date:'2023-08-01',
-        comment: '안녕하세요'
-    },
-    {
-        id:2,
-        userId:'helloworld2',
-        date:'2023-08-02',
-        comment: '반갑습니다'
-    },
-    {
-        id:3,
-        userId:'helloworld3',
-        date:'2023-08-03',
-        comment: '행복하세요'
-    },
-    {
-        id:4,
-        userId:'helloworld4',
-        date:'2023-08-04',
-        comment: '집가고싶다'
-    },
-];
+//index 생략 가능. /routes라고 쓰면 디폴트가 index이기 때문
+const router = require('./routes/index');
+app.use('/',router);
+
+//ex
+//const userRouter = require('./routes/user');
+//app.use('/user',userRouter)
 
 
-//router
-app.get('/',(req,res)=>{
-    res.render('index');
-});
-//GET /commnets
-app.get('/comments',(req,res)=>{
-    res.render('comments',{commentInfos: comments});
-});
-//GET /comment/:id
-app.get('/comment/:id', (req,res)=> {
-    // console.log(req.params);
-    // console.log(req.params.id);
-    const commentId= req.params.id
-    console.log(comments[commentId-1]);    
-    res.render('comment',{commentInfo : comments[commentId-1]});
-});
+
+
 //* 맨 마지막 선언
-app.get('*',(req,res)=> {
+//app.use 써도 작동함. 그러나 도메인 당 use 한개밖에 못써서 안쓰고, 404에만 씀
+app.use('*',(req,res)=> {
     res.render('404');
 });
 

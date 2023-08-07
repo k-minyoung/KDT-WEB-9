@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>POST실습</h1>
+    <form name="login">
+        <label for="id">아이디</label>
+        <input type="text" name="id" />
+        <br /> 
+        <label for="pw">비밀번호</label>       
+        <input type="password" name="pw" id="pw">
+        <br />
+        <button type="button" name="login" onclick="login1()">로그인</button>
+
+    </form>
+    <div class="result"></div>
+    <script>
+        const resultbox = document.querySelector('.result');
+
+        function login1 (){
+            const form = document.forms['login']
+            const data = {
+                id : form.id.value,
+                pw : form.pw.value
+
+            }
+            
+            axios ({
+                method : 'post',
+                url : '/axios',
+                data : data,
+                //    if (`${data.id}`=='minyoung',`${data.pw}`=='1234') {
+                    //     resultbox.style.color = 'blue'
+                    //     resultbox.textContent = "로그인 성공"
+                    //     console.log("result",true)
+                    // }else{
+                        //    resultbox.style.color = 'red'
+                        //     resultbox.textContent = "아이디와 비밀번호를 확인해주세요"
+                        //     console.log("result",false)
+                        //     const { result , userInfo} = res.data;
+                        // };
+                    }).then((res)=> {
+            console.log('res', res.data);
+            const { result , userInfo} = res.data;
+            if( result) {
+                resultbox.textContent = `환영합니다`
+                resultbox.style.color = 'blue'
+            }else{
+                resultbox.textContent = `아이디 비밀번호 확인`
+                resultbox.style.color = 'red'
+            }
+            });
+        }
+
+
+
+
+
+
+        //리더님코드
+        // const resultBox = document.querySelector('.result');
+        //     function login() {
+        //         console.log('axios post');
+        //         const data = {
+        //             username: document.querySelector('#username').value,
+        //             password: document.querySelector('#password').value,
+        //         };
+        //         console.log(data);
+        //         axios({
+        //             method: 'POST',
+        //             url: '/resultPost',
+        //             data,
+        //         }).then((res) => {
+        //             console.log('res', res);
+        //             const { result, userInfo } = res.data;
+        //             if (result) {
+        //                 resultBox.textContent = `${userInfo.username}님 환영합니다.`;
+        //                 resultBox.style.color = 'blue';
+        //             } else {
+        //                 resultBox.textContent = '아이디 또는 패쓰워드가 틀렸습니다';
+        //                 resultBox.style.color = 'red';
+        //             }
+        //         });
+        //     }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
