@@ -16,6 +16,9 @@
             <input type="password" id="pw" name="pw" /><br />
             <button type="button" onclick="login()">로그인</button>
         </form>
+        <form action="/user/profile" method="post" name="form-profile">
+            <input type="hidden" name="userid">
+        </form>
     </body>
 
     <script>
@@ -32,8 +35,15 @@
                 console.log('res',res);
                 if(res.data.result) {
                     alert('로그인 성공')
+                    const form_profile = document.forms['form-profile']
+                    form_profile.userid.value =  form.userid.value;
+                    form_profile.submit();
                 }else{
-                    alert('아디비번확인')
+                    //1 window.location.href = '/user/signin'
+                    //2 window.location.reload()
+                    //둘 다 , 로그인 실패시 폼을 리셋시키기 위해. 새로고침하던지 폼을 다시들어가던지.
+                    form.reset();
+                    //가장 간단한 방법
                 };
             });
 
