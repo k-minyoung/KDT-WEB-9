@@ -13,7 +13,9 @@ exports.getVisitors = (req,res)=>{
     // });
     //SELECT * FROM visitor
     models.Visitor.findAll().then((result) => {
-        res.render('visitor', {data : result});
+        console.log('findAll' ,result)
+       // res.render('visitor', {data : result});
+       res.send({data:result});
     })
 };
 //방명록 하나 조회
