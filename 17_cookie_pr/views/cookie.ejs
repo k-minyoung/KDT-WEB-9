@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      
+    </head>
+  
+    <body>
+        <!-- 부트스트랩 이용 -->
+        <button type="button" onclick="ck()">쿠키확인</button>
+        <button type="button" onclick="clearCookie()">쿠키삭제</button>
+
+        <div class="modal" id="thismodal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">안내</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>익스플로러 지원 종료 어쩌구</p>
+                </div>
+                <div class="modal-footer">
+                    <label for="today">오늘그만보기</label>
+                    <input type="checkbox" id="today">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal()">닫기</button>
+           
+                </div>
+              </div>
+            </div>
+          </div>
+    </body>
+  
+    <script>
+        //쿠키확인
+        function ck() {
+            console.log(document.cookie)
+        }
+        //쿠키삭제
+        function clearCookie () {
+            console.log("clearCookie")
+            document.cookie = "myCookie=notToday; expires=Fri, 12 Aug 2023 13:00:00 GMT;";
+        }
+        console.log(document.cookie)
+        
+        //쿠키 배열화
+        let cookieArr = document.cookie.split('=')
+        console.log(cookieArr)
+        
+        //showmodal
+        $(document).ready(function() {
+            if(cookieArr.length > 1){$("#thismodal").modal("hide")
+        }else{
+	         $("#thismodal").modal("show");
+        }});
+        function closeModal() {
+            console.log("close")
+            let checkbox = document.getElementById("today")
+            if(checkbox.checked) {
+            document.cookie = "myCookie=notToday";
+        }};
+    </script>
