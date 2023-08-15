@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>JWT실습</h1>
+    <div id="button"></div>
+   
+
+
+    <script>
+        (async function(){
+
+      
+        //페이지가 열리자마자 즉시 실행하라는 함수. 원래 즉시 실행하지만async를 넣어주기 위해 생성
+        const token = localStorage.getItem('login')
+        const button = document.querySelector('#button')
+        console.log(token);
+        let data = ''
+        if (!token) {
+            data =`
+            <a href="/signup">회원가입</a>
+            <a href="/login">로그인</a>
+            `;
+            //토큰값이 없을때 보여주는 페이지
+        }else {
+            const res = await axios({
+                method : 'GET',
+                url : '/token',
+                headers: {
+                    authorization: `Bearer ${token}`
+                    //토큰값이 있으면 이걸 보냄 프론트로
+                }
+            })
+            console.log('res',res.data)
+            if(res.data.result) {
+                data = `<p>${res.data.name} 님 환영합니다.</p>
+                <button type='button' onclick='logout()'>로그아웃</button>
+                `
+            }
+        }
+        button.innerHTML = data;
+    })();
+
+    function logout(){
+        localStorage.clear();
+        document.location.href='/'
+    }
+    </script>
+</body>
+</html>
