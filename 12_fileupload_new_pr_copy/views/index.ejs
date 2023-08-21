@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>동적 업로드</h1>
+        <form onsubmit="fileupload(event)">
+        <input type="file" name="file" id="files" multiple /><br />
+        <button type="submit">업로드</button>
+        </form>
+        <br />
+        <div class="result"></div>
+
+        <script>
+            const resultBox = document.querySelector('.result')
+            async function fileupload(event) {
+                event.preventDefault();
+                const file = document.querySelector('#files')
+                
+                const formData = new FormData()
+                for(i = 0; i < file.files.length; i++){
+                formData.append('files', file.files[i])
+                }
+
+                try {
+                    const result = await axios({
+                    method : "POST",
+                    url : '/upload',
+                    data : formData,
+                    headers : {
+                        'Content-Type' : 'multipart/form-data'
+                    }
+                })
+                console.log('result',result)
+                for (i = 0; i < result.data.length; i++) {
+                    const elem = result.data[i].path
+                    const img = document.createElement('img')
+                    img.src = elem
+                    img.style.width = '200px'
+                    resultBox.appendChild(img)
+                }
+                } catch (error) {
+                    console.log(error)
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>
