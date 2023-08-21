@@ -26,9 +26,6 @@ exports.post_login = (req,res) =>{
         }
     })
 }
-
-
-
 //회원가입
 exports.register = (req,res) =>{
     res.render('register')
