@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원 등록</h1>
+    <form name="add-form">
+        <label for="name">이름 : </label>
+        <input type="text" name="name" id="name"><br />
+
+        <!-- <input type="radio" id="typeA" name="radio_name" value="male" checked><label for="typeA">남자</label>
+        <input type="radio" id="typeB" name="radio_name" value="female" ><label for="typeB">여자</label> -->
+        <label for="gender">성별 : </label>
+        <input type="text" name="gender" id="gender" placeholder="male / female">
+        <br />
+        <label for="major">전공 : </label>
+        <input type="text" name="major" id="major">
+        <button type="button" onclick="adduser()">등록</button>
+    </form>
+
+    <script>
+        function adduser() {
+            const form = document.forms['add-form']
+            axios ({
+                method : 'POST',
+                url : '/add',
+                data : {
+                    name : form.name.value,
+                    gender : form.gender.value,
+                    major : form.major.value
+                }
+            }).then((result2) => {
+                console.log('res',result2)
+                if(result2.data.result) { 
+                    alert('등록완료')
+                    document.location.href = '/'
+                }
+            })
+        }
+    </script>
+</body>
+</html>
