@@ -12,6 +12,9 @@ exports.getadd = (req,res) => {
 exports.add = (req,res) => {
     const {name,gender,major} = req.body
     console.log(req.body)
-    students.push({name,gender,major})
+    students.push({
+        id : students.length+1,
+        name,gender,major
+    })
     res.send({result : true})
 }
