@@ -15,9 +15,6 @@ app.get('/', (req, res) => {
     res.render('client');
 });
 
-server.listen(PORT, () => {
-    console.log(`http://localhost:${PORT}`);
-});
 
 //투표결과 초기화 변수
 const votes = {
@@ -45,4 +42,8 @@ wss.on('connection', (socket) => {
     socket.on('close', () => {
         console.log('클라이언트와 연결이 종료됨');
     });
+});
+
+server.listen(PORT, () => {
+    console.log(`http://localhost:${PORT}`);
 });

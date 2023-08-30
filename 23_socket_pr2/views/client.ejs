@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>socket.io</h1>
+    </form>
+    <div></div>
+
+    <script>
+        const msgForm = document.querySelector('#currentMsg')
+        
+        const socket = io()
+
+       
+        
+        //이벤트생성
+        socket.emit('open_msg',{name : 'client', message : 'Hello world'}, (res)=> {
+            console.log(res)
+        });
+        socket.on('backend_msg',(res)=> {
+            const div = document.querySelector('div')
+            div.innerText = `${res.msg}`
+
+        })
+        //폼이벤트
+        // msgForm.addEventListener('submit', (event) => {
+        //     event.preventDefault()
+
+        //     const hello = document.querySelector('#hello')
+        //     const study = document.querySelector('#study')
+        //     const bye = document.querySelector('#bye')
+        //     if() {socket.emit('form_msg',{ hello : hello.value})}
+        //    socket.emit('form_msg',{ hello : hello.value, study : study.value, bye : bye.value})
+            
+        // })
+    
+
+    </script>
+</body>
+</html>

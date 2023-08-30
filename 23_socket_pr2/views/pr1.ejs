@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <button  id="bye" value="bye : 잘가" onclick="hello()">hello</button>
+    <button id="study" value="study : 공부합시다" onclick="study()">study</button>
+    <button id="hello" value="hello : 안녕하세요" onclick="bye()">bye</button>
+    <p id="form-data"></p>
+
+    <script>
+        const socket = io();
+        const p = document.querySelector('#form-data')
+
+        function hello() {
+            socket.emit ('hello',{ name: 'client', message : 'hello'})
+            socket.on("cbHello", (data)=> {
+                p.textContent = `${data.name} : ${data.message}`
+            })
+        }
+        function study() {
+            socket.emit ('study',{ name: 'client', message : 'study'})
+            socket.on("cbStudy", (data)=> {
+                p.textContent = `${data.name} : ${data.message}`
+            })
+        }
+        function bye() {
+            socket.emit ('bye',{ name: 'client', message : 'bye'})
+            socket.on("cbBye", (data)=> {
+                p.textContent = `${data.name} : ${data.message}`
+            })
+        }
+    </script>
+</body>
+</html>
