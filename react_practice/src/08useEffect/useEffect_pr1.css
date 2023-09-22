@@ -1,0 +1,22 @@
+.header {
+    background-color: rgb(72, 171, 248);
+    width: 800px;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+.box {
+    display: flex;
+    width: 800px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.box2 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    width: 700px;
+    
+}

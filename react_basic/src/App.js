@@ -9,7 +9,9 @@ import Test from "./test"
 import Test2 from "./test2";
 import Event from "./Event";
 import EventClass from "./EventClass";
-import EventPr from "./EventPr";
+import LifeCycleClass from "./LifeCycleClass";
+import LifeCycleFunc from "./08Lifecycle/LifeCycleFunc";
+// import EventPr from "./EventPr";
 
 
 
@@ -32,7 +34,9 @@ function App() {
         {/* <Event></Event>
         <EventClass /> */}
 
-        <EventPr message="클릭성공"></EventPr>
+        {/* <EventPr message="클릭성공"></EventPr> */}
+        {/* <LifeCycleClass/> */}
+        <LifeCycleFunc></LifeCycleFunc>
     </>
   )
 }

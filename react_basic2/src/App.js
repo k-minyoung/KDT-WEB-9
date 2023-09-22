@@ -1,22 +1,25 @@
-// import Counter from "./Counter";
+import FuncStatePr1 from "./FuncStatePr1";
+import FuncStatePr2 from "./FuncStatePr2";
+import FuncStatePr4 from "./FuncStatePr4";
+import FuncStatePr5 from "./FuncStatePr5";
+import FuncStatePr5_answer from "./FuncStatePr5_answer";
+import ToggleFunc from "./ToggleFunc";
 
-import CounterFunc from "./CounterFunc";
-// import StatePr1 from "./StatePr1";
-// import StatePr2 from "./StatePr2";
-// import StatePr3 from "./StatePr3";
 
 function App() {
   return <>
-    {/* <Counter></Counter> */}
-    {/* <StatePr1></StatePr1>
+    {/* <ToggleFunc></ToggleFunc>
+    <FuncStatePr1/> */}
     <br />
     <br />
-    <StatePr2></StatePr2>
+    {/* <FuncStatePr2/> */}
     <br />
     <br />
-    <StatePr3></StatePr3>
-    <br /> */}
-    <CounterFunc></CounterFunc>
+    {/* <FuncStatePr4/> */}
+    <br />
+    <br />
+    {/* <FuncStatePr5/> */}
+    <FuncStatePr5_answer></FuncStatePr5_answer>
   </>
 }
 
