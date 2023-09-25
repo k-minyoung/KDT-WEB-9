@@ -5,11 +5,15 @@ import StatePrac1 from "./06State/StatePrac1";
 import StatePrac2 from "./06State/StatePrac2";
 import StatePrac3 from "./06State/StatePrac3";
 import StatePrac4 from "./06State/StatePrac4";
+import UseStatePrac5_1 from "./07UseState/UseStatePrac5-1";
 import PostList from "./08useEffect/useEffect_pr1";
 import "./08useEffect/useEffect_pr1.css"
 import UserList from "./08useEffect/useEffect_pr2";
 import axios from 'axios'
 import { useState, useEffect } from "react";
+import RefPr1 from "./09Ref/StatePrac3";
+import RefPr2 from "./09Ref/UseStatePrac3";
+import SignupForm from "./10Hook/useReducerPr1";
 // import UseStatePrac1 from "./07UseState/UseStatePrac1";
 // import UseStatePrac2 from "./07UseState/UseStatePrac2";
 // import UseStatePrac3 from "./07UseState/UseStatePrac3";
@@ -23,8 +27,8 @@ function App() {
    }
    return (
        <>
-            <button onClick={removeComp}>연결해제</button>
-            {status && <UserList />}
+            {/* <button onClick={removeComp}>연결해제</button>
+            {status && <UserList />} */}
             {/* Prop 실습 */}
             {/* <PropsPrac1 food="치킨" />
             <PropsPrac1 />
@@ -48,6 +52,10 @@ function App() {
             <UseStatePrac4 />
             <UseStatePrac5 /> */}
             {/* <PostList /> */}
+            {/* <UseStatePrac5_1></UseStatePrac5_1> */}
+            {/* <RefPr1></RefPr1> */}
+            {/* <RefPr2></RefPr2> */}
+            <SignupForm/>
         </>
     );
 }

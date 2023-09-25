@@ -11,6 +11,13 @@ import Event from "./Event";
 import EventClass from "./EventClass";
 import LifeCycleClass from "./LifeCycleClass";
 import LifeCycleFunc from "./08Lifecycle/LifeCycleFunc";
+import ClassRefSample from "./09Ref/ClassRefSample1";
+import ClassRefSample2 from "./09Ref/ClassRefSample2";
+import FuncRefSample1 from "./09Ref/FuncRefSample1";
+import FuncRefSample2 from "./09Ref/FuncRefSample2";
+import UseMemo from "./10Hook/useMemo";
+import UseCallback from "./10Hook/useCallback";
+import Counter from "./10Hook/useReducer";
 // import EventPr from "./EventPr";
 
 
@@ -36,7 +43,17 @@ function App() {
 
         {/* <EventPr message="클릭성공"></EventPr> */}
         {/* <LifeCycleClass/> */}
-        <LifeCycleFunc></LifeCycleFunc>
+        {/* <LifeCycleFunc></LifeCycleFunc> */}
+        {/* <ClassRefSample/>
+        <ClassRefSample/>
+        <ClassRefSample2/>
+        <ClassRefSample2/> */}
+        {/* <FuncRefSample1 />
+        <FuncRefSample1 />
+        <FuncRefSample2 /> */}
+        {/* <UseMemo /> */}
+        {/* <UseCallback /> */}
+        {/* <Counter /> */}
     </>
   )
 }
