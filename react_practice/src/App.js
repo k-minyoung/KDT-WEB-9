@@ -14,6 +14,12 @@ import { useState, useEffect } from "react";
 import RefPr1 from "./09Ref/StatePrac3";
 import RefPr2 from "./09Ref/UseStatePrac3";
 import SignupForm from "./10Hook/useReducerPr1";
+import ScssPr1 from "./11Style/scssPr1";
+import PrScss2 from "./11Style/PrScss2";
+import StyledComponentPr1 from "./11Style/StyledComponentPr1";
+
+
+
 // import UseStatePrac1 from "./07UseState/UseStatePrac1";
 // import UseStatePrac2 from "./07UseState/UseStatePrac2";
 // import UseStatePrac3 from "./07UseState/UseStatePrac3";
@@ -55,7 +61,10 @@ function App() {
             {/* <UseStatePrac5_1></UseStatePrac5_1> */}
             {/* <RefPr1></RefPr1> */}
             {/* <RefPr2></RefPr2> */}
-            <SignupForm/>
+            {/* <SignupForm/> */}
+            {/* <ScssPr1 /> */}
+            {/* <PrScss2></PrScss2> */}
+            <StyledComponentPr1/>
         </>
     );
 }

@@ -1,0 +1,23 @@
+@import './utils2.scss';
+
+.box {
+    position: relative;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+    &.red {
+        @include box (red);
+        @include rotate-box(redAni,100px);
+        animation-name: redAni
+    }
+    &.pink{
+        @include box (pink);
+        @include rotate-box(pinkAni, 200px);
+        animation-name: pinkAni
+    }
+    &.violet { 
+        @include box (violet);
+        @include rotate-box(violetAni, 300px);
+        animation-name: violetAni;
+    }
+}
