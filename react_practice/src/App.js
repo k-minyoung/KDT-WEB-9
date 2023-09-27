@@ -17,6 +17,9 @@ import SignupForm from "./10Hook/useReducerPr1";
 import ScssPr1 from "./11Style/scssPr1";
 import PrScss2 from "./11Style/PrScss2";
 import StyledComponentPr1 from "./11Style/StyledComponentPr1";
+import StyledComponentPr2 from "./11Style/StyledComponentPr2";
+import Router from "./12Router/Router";
+
 
 
 
@@ -64,7 +67,9 @@ function App() {
             {/* <SignupForm/> */}
             {/* <ScssPr1 /> */}
             {/* <PrScss2></PrScss2> */}
-            <StyledComponentPr1/>
+            {/* <StyledComponentPr1/>
+            <StyledComponentPr2/> */}
+            <Router />
         </>
     );
 }
