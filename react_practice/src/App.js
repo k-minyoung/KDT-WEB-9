@@ -1,3 +1,4 @@
+import './App.css'
 import PropsPrac1 from "./04Props/PropsPrac1";
 import PropsPrac2 from "./04Props/PropsPrac2";
 import Message from "./05Event/Message";
@@ -7,7 +8,7 @@ import StatePrac3 from "./06State/StatePrac3";
 import StatePrac4 from "./06State/StatePrac4";
 import UseStatePrac5_1 from "./07UseState/UseStatePrac5-1";
 import PostList from "./08useEffect/useEffect_pr1";
-import "./08useEffect/useEffect_pr1.css"
+// import "./08useEffect/useEffect_pr1.css"
 import UserList from "./08useEffect/useEffect_pr2";
 import axios from 'axios'
 import { useState, useEffect } from "react";
@@ -19,6 +20,11 @@ import PrScss2 from "./11Style/PrScss2";
 import StyledComponentPr1 from "./11Style/StyledComponentPr1";
 import StyledComponentPr2 from "./11Style/StyledComponentPr2";
 import Router from "./12Router/Router";
+import HookFormPr from "./13Form/HookFormPr";
+import { ThemeProvider } from './14Context/store/theme-context';
+import ThemeSelector from './14Context/ThemeSelector';
+import { LangProvider } from './14Context/store/lang-context';
+import LangSelector from './14Context/LangSelector';
 
 
 
@@ -30,10 +36,10 @@ import Router from "./12Router/Router";
 // import UseStatePrac5 from "./07UseState/UseStatePrac5";
 
 function App() {
-    const [status, setStatus] = useState(true)
-    const removeComp = () => {
-        setStatus(!status);
-   }
+//     const [status, setStatus] = useState(true)
+//     const removeComp = () => {
+//         setStatus(!status);
+//    }
    return (
        <>
             {/* <button onClick={removeComp}>연결해제</button>
@@ -69,7 +75,14 @@ function App() {
             {/* <PrScss2></PrScss2> */}
             {/* <StyledComponentPr1/>
             <StyledComponentPr2/> */}
-            <Router />
+            {/* <Router /> */}
+            {/* <HookFormPr /> */}
+            <ThemeProvider>
+                <ThemeSelector />
+            </ThemeProvider>
+            <LangProvider>
+                <LangSelector />
+            </LangProvider>
         </>
     );
 }
