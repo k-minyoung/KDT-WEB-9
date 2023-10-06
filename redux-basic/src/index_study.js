@@ -1,43 +1,4 @@
-import React from 'react'
-import ReactDOM  from 'react-dom/client'
-import App from './App'
-import { Provider } from 'react-redux';
-import store from './store';
-
-const root = ReactDOM.createRoot( document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* import {createStore} from 'redux';
+import {createStore} from 'redux';
 
 //실습1
 
@@ -96,7 +57,7 @@ form.addEventListener('submit', (event) => {
   store.dispatch({ type : ADD_TODO, text : input.value})
   input.value = ""
 });
-*/
+
 
 
 
